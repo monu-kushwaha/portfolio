@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         // Send the AJAX request
         $.ajax({
-            url: "https://monu-kushwaha.github.io/portfolio/sendEmail.php", // Replace with your server URL
+            url: "http://developer-monu.000.pe/index.php", // Replace with your server URL
             type: "POST",
             data: formData, // Send the serialized form data
             success: function(response) {
