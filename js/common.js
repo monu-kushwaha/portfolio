@@ -24,6 +24,11 @@ $(document).ready(function() {
 
 })
 
+$(document).on('click', '.site-mobile-menu-body .mobile-ipad-location', function() {
+    // alert('Button clicked!');
+    $('#location-details span').click(); // Trigger click on #location-details
+    $('body').removeClass('offcanvas-menu');
+});
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -117,9 +122,8 @@ function displayLocationDetails(address) {
 
     // Truncate address if it exceeds a certain length (e.g., 50 characters)
     let truncatedAddress = conciseAddress.length > 50 ? conciseAddress.substring(0, 50) + '...' : conciseAddress;
-    $('#location-details').append('adaasd');
     // Update the location details with the clickable, truncated address
-    document.getElementById('location-details').innerHTML = `<span style="cursor: pointer;" onclick="showPopup('${address.house_number || ''}', '${address.road || ''}', '${address.suburb || ''}', '${address.town || ''}', '${address.state || ''}', '${address.postcode || ''}', '${address.country || ''}')">${truncatedAddress}</span>`;
+    document.getElementById('location-details').innerHTML = `<span style="cursor: pointer;" onclick="showPopup('${address.house_number || ''}', '${address.road || ''}', '${address.suburb || ''}', '${address.town || ''}', '${address.state || ''}', '${address.postcode || ''}', '${address.country || ''}')"><i class="material-icons">location_on</i>${truncatedAddress}</span>`;
 }
 
 
