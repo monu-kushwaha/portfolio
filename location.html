@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Get Current Location</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Get Current Location</h1>
+    <button onclick="getLocation();">Get Location</button>
+    <div id="location"></div>
+    <div id="location-details" class="display-location"></div>
+
+    <!-- Popup Modal -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <button class="close" onclick="closePopup()">X</button>
+        <h2>Your Current Location is display below:</h2>
+        <p id="popup-content"></p>
+    </div>
+</body>
+
+</html>
